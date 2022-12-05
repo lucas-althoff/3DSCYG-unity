@@ -45,7 +45,7 @@
 					}
 					else
 					{
-						_statusText.text = string.Format("{0}", currLoc.LatitudeLongitude);
+						_statusText.text = string.Format("Helsinki exemplo\npos:{0}", currLoc.LatitudeLongitude);
 					}
 				}
 			}

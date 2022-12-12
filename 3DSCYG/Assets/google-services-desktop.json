@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "73108249637",
+    "project_id": "scygdev",
+    "storage_bucket": "scygdev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:73108249637:android:8568862db6898d988233cc",
+        "android_client_info": {
+          "package_name": "com.scyg.SCYGdev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "73108249637-cv5qq1mbkvqra07q16q24vlg4rfvbvgr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClMQycOai6gKil3bTNdaQ2YgVU9OYYSVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "73108249637-cv5qq1mbkvqra07q16q24vlg4rfvbvgr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

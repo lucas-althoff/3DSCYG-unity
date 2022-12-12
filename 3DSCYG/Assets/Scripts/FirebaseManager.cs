@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Firebase;
 using Firebase.Auth;
-//using Firebase.Database;
+using Firebase.Database;
 using TMPro;
 using System.Linq;
 
@@ -13,7 +13,7 @@ public class FirebaseManager : MonoBehaviour
     public DependencyStatus dependencyStatus;
     public FirebaseAuth auth;    
     public FirebaseUser User;
-    //public DatabaseReference DBreference;
+    public DatabaseReference DBreference;
 
     //Login variables
     [Header("Login")]
@@ -53,7 +53,7 @@ public class FirebaseManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
-        //DBreference = FirebaseDatabase.DefaultInstance.RootReference;
+        DBreference = FirebaseDatabase.DefaultInstance.RootReference;
     }    
 
     public void ClearLoginFields()
@@ -222,8 +222,17 @@ public class FirebaseManager : MonoBehaviour
             }
         }
     }
-
+   //Function for the sign out button
+    public void SignOutButton()
+    {
+        auth.SignOut();
+        UIManager.instance.LoginScreen();
+        ClearRegisterFields();
+        ClearLoginFields();
+    }
 }
+
+
 /*
 using System.Collections;
 using UnityEngine;
@@ -355,8 +364,8 @@ public class FirebaseManager : MonoBehaviour
     {
         auth.SignOut();
         UIManager.instance.LoginScreen();
-        ClearRegisterFeilds();
-        ClearLoginFeilds();
+        ClearRegisterFields();
+        ClearLoginFields();
     }
     //Function for the save button
     public void SaveDataButton()

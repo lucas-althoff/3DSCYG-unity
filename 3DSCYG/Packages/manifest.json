@@ -3,6 +3,7 @@
     "com.google.external-dependency-manager": "file:../GooglePackages/com.google.external-dependency-manager-1.2.175.tgz",
     "com.google.firebase.app": "file:../GooglePackages/com.google.firebase.app-10.2.0.tgz",
     "com.google.firebase.auth": "file:../GooglePackages/com.google.firebase.auth-10.2.0.tgz",
+    "com.google.firebase.database": "file:C:/Users/Usuário/Videos/Projetos/Smartcity_Games/3DSCYG-unity/3DSCYG/GooglePackages/com.google.firebase.database-10.2.0.tgz",
     "com.unity.collab-proxy": "1.17.1",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.15",

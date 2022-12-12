@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "73108249637",
+    "firebase_url": "https://scygdev-default-rtdb.firebaseio.com",
     "project_id": "scygdev",
     "storage_bucket": "scygdev.appspot.com"
   },

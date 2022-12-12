@@ -22,6 +22,14 @@
         "com.google.firebase.app": "10.2.0"
       }
     },
+    "com.google.firebase.database": {
+      "version": "file:C:/Users/Usuário/Videos/Projetos/Smartcity_Games/3DSCYG-unity/3DSCYG/GooglePackages/com.google.firebase.database-10.2.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.google.firebase.auth": "10.2.0"
+      }
+    },
     "com.unity.collab-proxy": {
       "version": "1.17.1",
       "depth": 0,

@@ -1,4 +1,4 @@
-/*
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,14 +11,20 @@ public class UIManager : MonoBehaviour
     //Screen object variables
     public GameObject loginUI;
     public GameObject registerUI;
-    public GameObject userDataUI;
-    public GameObject scoreboardUI;
+    public GameObject PlayerViewUI;
+    public GameObject TelaEntradaUI;
+    public GameObject MenuUI;
+    public GameObject MissoesUI;
+    public GameObject PerfilUI;
+    //public GameObject userDataUI;
+    //public GameObject scoreboardUI;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            StartScreen();    
         }
         else if (instance != null)
         {
@@ -27,14 +33,32 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void StartScreen() //Turn off all screens
+    {
+        loginUI.SetActive(true);
+        registerUI.SetActive(false);
+        PlayerViewUI.SetActive(false);
+        TelaEntradaUI.SetActive(false);
+        MenuUI.SetActive(false);
+        MissoesUI.SetActive(false);
+        PerfilUI.SetActive(false);
+        //userDataUI.SetActive(false);
+        //scoreboardUI.SetActive(false);
+    }
+
     //Functions to change the login screen UI
 
     public void ClearScreen() //Turn off all screens
     {
         loginUI.SetActive(false);
         registerUI.SetActive(false);
-        userDataUI.SetActive(false);
-        scoreboardUI.SetActive(false);
+        PlayerViewUI.SetActive(false);
+        TelaEntradaUI.SetActive(false);
+        MenuUI.SetActive(false);
+        MissoesUI.SetActive(false);
+        PerfilUI.SetActive(false);
+        //userDataUI.SetActive(false);
+        //scoreboardUI.SetActive(false);
     }
 
     public void LoginScreen() //Back button
@@ -47,7 +71,37 @@ public class UIManager : MonoBehaviour
         ClearScreen();
         registerUI.SetActive(true);
     }
+    public void PlayerViewScreen() //Back button
+    {
+        ClearScreen();
+        PlayerViewUI.SetActive(true);
+    }
 
+    public void TelaEntradaScreen() //Back button
+    {
+        ClearScreen();
+        TelaEntradaUI.SetActive(true);
+    }
+
+    public void PerfilScreen() //Back button
+    {
+        ClearScreen();
+        PerfilUI.SetActive(true);
+    }
+
+    public void MissoesScreen() //Back button
+    {
+        ClearScreen();
+        MissoesUI.SetActive(true);
+    }
+    
+    public void MenuScreen() //Back button
+    {
+        ClearScreen();
+        MenuUI.SetActive(true);
+    }
+    
+    /*
     public void UserDataScreen() //Logged in
     {
         ClearScreen();
@@ -59,5 +113,5 @@ public class UIManager : MonoBehaviour
         ClearScreen();
         scoreboardUI.SetActive(true);
     }
+    */
 }
-*/

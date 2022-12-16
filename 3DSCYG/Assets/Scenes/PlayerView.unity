@@ -5233,6 +5233,7 @@ MonoBehaviour:
   emailRegisterField: {fileID: 1072529591}
   passwordRegisterField: {fileID: 716580354}
   passwordRegisterVerifyField: {fileID: 87626142}
+  TokenRegister: {fileID: 1463093104}
   warningRegisterText: {fileID: 1612334895}
 --- !u!1 &856343877
 GameObject:

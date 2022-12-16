@@ -28,6 +28,7 @@ public class FirebaseManager : MonoBehaviour
     public TMP_InputField emailRegisterField;
     public TMP_InputField passwordRegisterField;
     public TMP_InputField passwordRegisterVerifyField;
+    public TMP_InputField TokenRegister;
     public TMP_Text warningRegisterText;
 
     void Awake()

@@ -16,8 +16,8 @@ public class UIManager : MonoBehaviour
     public GameObject MenuUI;
     public GameObject MissoesUI;
     public GameObject PerfilUI;
-    //public GameObject userDataUI;
-    //public GameObject scoreboardUI;
+    public GameObject userDataUI;
+    public GameObject scoreboardUI;
 
     private void Awake()
     {
@@ -42,8 +42,8 @@ public class UIManager : MonoBehaviour
         MenuUI.SetActive(false);
         MissoesUI.SetActive(false);
         PerfilUI.SetActive(false);
-        //userDataUI.SetActive(false);
-        //scoreboardUI.SetActive(false);
+        userDataUI.SetActive(false);
+        scoreboardUI.SetActive(false);
     }
 
     //Functions to change the login screen UI
@@ -57,8 +57,8 @@ public class UIManager : MonoBehaviour
         MenuUI.SetActive(false);
         MissoesUI.SetActive(false);
         PerfilUI.SetActive(false);
-        //userDataUI.SetActive(false);
-        //scoreboardUI.SetActive(false);
+        userDataUI.SetActive(false);
+        scoreboardUI.SetActive(false);
     }
 
     public void LoginScreen() //Back button
@@ -101,7 +101,7 @@ public class UIManager : MonoBehaviour
         MenuUI.SetActive(true);
     }
     
-    /*
+    
     public void UserDataScreen() //Logged in
     {
         ClearScreen();
@@ -113,5 +113,5 @@ public class UIManager : MonoBehaviour
         ClearScreen();
         scoreboardUI.SetActive(true);
     }
-    */
+    
 }

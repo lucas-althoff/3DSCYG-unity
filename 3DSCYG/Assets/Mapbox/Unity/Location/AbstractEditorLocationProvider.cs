@@ -27,7 +27,7 @@
 		}
 #endif
 
-		IEnumerator QueryLocation()
+		public IEnumerator QueryLocation()
 		{
 			// HACK: Let others register before we send our first event. 
 			// Often this happens in Start.

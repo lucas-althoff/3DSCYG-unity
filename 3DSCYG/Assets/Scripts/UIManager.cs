@@ -18,13 +18,14 @@ public class UIManager : MonoBehaviour
     public GameObject PerfilUI;
     public GameObject userDataUI;
     public GameObject scoreboardUI;
+    public GameObject MissaoManager;
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            StartScreen();    
+            StartScreen();
         }
         else if (instance != null)
         {
@@ -36,6 +37,7 @@ public class UIManager : MonoBehaviour
     public void StartScreen() //Turn off all screens
     {
         loginUI.SetActive(true);
+        MissaoManager.SetActive(true);
         registerUI.SetActive(false);
         PlayerViewUI.SetActive(false);
         TelaEntradaUI.SetActive(false);
@@ -59,6 +61,20 @@ public class UIManager : MonoBehaviour
         PerfilUI.SetActive(false);
         userDataUI.SetActive(false);
         scoreboardUI.SetActive(false);
+        MissaoManager.SetActive(true);
+    }
+
+  public void ClearScreenPopUp() //Turn off all screens except PlayerView HUD
+    {
+        loginUI.SetActive(false);
+        registerUI.SetActive(false);
+        TelaEntradaUI.SetActive(false);
+        MenuUI.SetActive(false);
+        MissoesUI.SetActive(false);
+        PerfilUI.SetActive(false);
+        userDataUI.SetActive(false);
+        scoreboardUI.SetActive(false);
+        MissaoManager.SetActive(true);
     }
 
     public void LoginScreen() //Back button
@@ -91,7 +107,7 @@ public class UIManager : MonoBehaviour
 
     public void MissoesScreen() //Back button
     {
-        ClearScreen();
+        ClearScreenPopUp();
         MissoesUI.SetActive(true);
     }
     
@@ -114,4 +130,10 @@ public class UIManager : MonoBehaviour
         scoreboardUI.SetActive(true);
     }
     
+    public void PlayerViewActivate() //Scoreboard button
+    {
+        ClearScreen();
+        PlayerViewUI.SetActive(true);
+    }
+
 }

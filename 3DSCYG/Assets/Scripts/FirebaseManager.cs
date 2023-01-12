@@ -44,7 +44,9 @@ public class FirebaseManager : MonoBehaviour
     //[Header("Fixed UserData")]
     //public TMP_TEXT usernameFixo;//Dados Fixos
     //public TMP_TEXT xpFixo;
-    
+
+
+
     void Awake()
     {
         //Check that all of the necessary dependencies for Firebase are present on the system
@@ -68,6 +70,9 @@ public class FirebaseManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
+        #if UNITY_EDITOR
+            FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
+        #endif   
         DBreference = FirebaseDatabase.DefaultInstance.RootReference;
     }    
 
@@ -160,17 +165,16 @@ public class FirebaseManager : MonoBehaviour
             warningLoginText.text = "";
             confirmLoginText.text = "Entrando...";
             Debug.LogFormat("Login bem-sucedido: {0} ({1})", User.DisplayName, User.Email);
-            yield return new WaitForSeconds(1);
-            UIManager.instance.TelaEntradaScreen();
-            
             StartCoroutine(LoadUserData());
+
+            yield return new WaitForSeconds(1);
+
             usernameField.text = User.DisplayName;
-            
             //UIManager.instance.UserDataScreen(); // Change to user data UI
             confirmLoginText.text = "";
             ClearLoginFields();
             ClearRegisterFields();
-            
+            UIManager.instance.TelaEntradaScreen();            
         }
     }
 

@@ -37,6 +37,8 @@
 
 				//Workaround
 				instance.GetComponent<MarcadorEvento>().eventPos = _locations[i];
+				instance.GetComponent<MarcadorEvento>().eventID = i+1;
+
 				instance.transform.localPosition = _map.GeoToWorldPosition(_locations[i], true);
 				instance.transform.localScale = new Vector3(_spawnScale, _spawnScale, _spawnScale);
 				_spawnedObjects.Add(instance);

@@ -11,16 +11,19 @@ public class MarcadorEvento : MonoBehaviour
     [SerializeField] float rotationSpeed = 50f;
     [SerializeField] float amplitude = 2.0f;
     [SerializeField] float frequency = 0.50f;
+    //[SerializeField] GameObject menuManager;
 
     LocationStatus playerLocation;
     public Vector2d eventPos; 
 
     MenuManager menuManager;
-
+    public int eventID;
+    EventManager eventManager;
     // Start is called before the first frame update
     void Start()
-    {
+    {                
         menuManager = GameObject.Find("TelasMissao").GetComponent<MenuManager>();
+        eventManager = GameObject.Find("EventManager").GetComponent<EventManager>();
     }
 
     // Update is called once per frame
@@ -45,12 +48,14 @@ public class MarcadorEvento : MonoBehaviour
         var distance = currentPlayerLocation.GetDistanceTo(eventLocation); 
         Debug.Log("Distancia: " + distance); 
 
-        if (distance < 70)
+        if (distance < eventManager.maxDist)
         {
-            menuManager.AbrirMissaoEventoPerto();
+            menuManager.LimparManager();
+            menuManager.AbrirMissaoEventoPerto(eventID);
         }
         else
         {
+            menuManager.LimparManager();
             menuManager.AbrirMissaoEventoLonge();
         }
     }

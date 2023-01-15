@@ -9,7 +9,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject MissaoEventoPertoUI;
     [SerializeField] private GameObject MissaoEventoLongeUI;
     [SerializeField] public GameObject MissaoManager;
+    [SerializeField] private EventManager eventManager;
    
+    int tempEvent;
     // void Update()
     // {
     //     if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2))
@@ -32,24 +34,41 @@ public class MenuManager : MonoBehaviour
     //     isUIPanelActive = false;
     //     return false;
     // }
+    // void Start() {
+    //     MissaoManager.SetActive(false);
+    // }
+
+    public void LimparManager()//fechar 
+    {
+        MissaoManager.SetActive(false);
+    }
 
     public void AbrirMissaoEventoLonge()//Abrir missao apos clicar em uma POI 
     {
         if (MissaoManager.activeSelf == false)
         {
             MissaoManager.SetActive(true);
+            if (MissaoEventoPertoUI.activeSelf == false & MissaoEventoPertoUI.activeSelf == false)
+            { 
+                MissaoEventoLongeUI.SetActive(true);
+            }
         }
-        else if (MissaoEventoPertoUI.activeSelf == false & MissaoEventoPertoUI.activeSelf == false)
+        if (MissaoEventoPertoUI.activeSelf == false & MissaoEventoPertoUI.activeSelf == false)
         { 
             MissaoEventoLongeUI.SetActive(true);
         }
     }
 
-    public void AbrirMissaoEventoPerto()//Abrir missao apos clicar em uma POI
+    public void AbrirMissaoEventoPerto(int eventID)//Abrir missao apos clicar em uma POI
     {
+        tempEvent = eventID; 
         if (MissaoManager.activeSelf == false)
         {
             MissaoManager.SetActive(true);
+            if (MissaoEventoPertoUI.activeSelf == false & MissaoEventoPertoUI.activeSelf == false)
+            { 
+                MissaoEventoPertoUI.SetActive(true);
+            }
         }
         else if (MissaoEventoPertoUI.activeSelf == false & MissaoEventoPertoUI.activeSelf == false)
         { 
@@ -59,6 +78,11 @@ public class MenuManager : MonoBehaviour
 
     public void BotaoFecharTela() //Botao voltar
     {
+        // if (MissaoManager.activeSelf == true)
+        // {
+        //     MissaoManager.SetActive(false);
+        // }
+
         if (MissaoEventoPertoUI.activeSelf == true)
         {
             MissaoEventoPertoUI.SetActive(false);
@@ -71,10 +95,11 @@ public class MenuManager : MonoBehaviour
             MissaoManager.SetActive(false);
         }
         
-        if (MissaoManager.activeSelf == true)
-        {
-            MissaoManager.SetActive(false);
-        }
-        
     }
+
+    public void OnBotaoMissao()
+    {
+        Debug.Log("Evento: " + tempEvent);
+        eventManager.ActivateEvent(tempEvent);
+    } 
 }

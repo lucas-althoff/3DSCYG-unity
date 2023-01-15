@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,6 +18,8 @@ public class UIManager : MonoBehaviour
     public GameObject userDataUI;
     public GameObject scoreboardUI;
     public GameObject MissaoManager;
+
+    public Transform parent;
 
     private void Awake()
     {
@@ -46,6 +47,13 @@ public class UIManager : MonoBehaviour
         PerfilUI.SetActive(false);
         userDataUI.SetActive(false);
         scoreboardUI.SetActive(false);
+
+        // //Desativar todas telas do adnimistrador de missoes
+        // Transform[] allChildren = MissaoManager.GetComponentsInChildren<Transform>();
+        // foreach (Transform child in allChildren)
+        // {
+        //     child.gameObject.SetActive(false);
+        // }
     }
 
     //Functions to change the login screen UI

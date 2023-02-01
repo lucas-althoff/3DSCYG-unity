@@ -21,11 +21,13 @@ public class EventManager : MonoBehaviour
 
     public void ActivateEvent(int eventID)
     {
-        if (eventID == 1)
-        {
-            SceneManager.LoadScene("Missao_Arte_1");
-        } else if (eventID == 2) {
-            SceneManager.LoadScene("Missao_Padrao_1");
-        }
+        SceneManager.LoadScene("IniciarMissaoSeletiva");
+        //if (eventID == 1)
+        //{
+        //    SceneManager.LoadScene("IniciarMissaoSeletiva");
+        //} else {
+            //SceneManager.LoadScene("IniciarMissaoPadrao");
+            //SceneManager.LoadScene("Missao_Padrao_1");
+        //}
     }
 }

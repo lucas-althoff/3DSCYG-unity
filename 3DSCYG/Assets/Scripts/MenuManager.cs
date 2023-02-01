@@ -78,16 +78,10 @@ public class MenuManager : MonoBehaviour
 
     public void BotaoFecharTela() //Botao voltar
     {
-        // if (MissaoManager.activeSelf == true)
-        // {
-        //     MissaoManager.SetActive(false);
-        // }
-
         if (MissaoEventoPertoUI.activeSelf == true)
         {
             MissaoEventoPertoUI.SetActive(false);
             MissaoManager.SetActive(false);
-
         }
         if (MissaoEventoLongeUI.activeSelf == true)
         {
@@ -102,4 +96,5 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Evento: " + tempEvent);
         eventManager.ActivateEvent(tempEvent);
     } 
+
 }

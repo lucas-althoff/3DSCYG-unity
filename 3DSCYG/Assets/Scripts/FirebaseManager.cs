@@ -70,6 +70,13 @@ public class FirebaseManager : MonoBehaviour
         Debug.Log("Setting up Firebase Auth");
         //Set the authentication instance object
         auth = FirebaseAuth.DefaultInstance;
+
+        if (null == auth)
+        {   
+            Debug.LogError("Auth is null");
+            return;
+        } 
+        
         #if UNITY_EDITOR
             FirebaseDatabase.DefaultInstance.SetPersistenceEnabled(false);
         #endif   

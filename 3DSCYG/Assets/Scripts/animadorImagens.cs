@@ -5,6 +5,7 @@ using UnityEngine;
 public class animadorImagens : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 50f;
+    [SerializeField] bool RotacaoZ;
     //[SerializeField] float amplitude = 2.0f;
     //[SerializeField] float frequency = 0.50f;
 
@@ -17,11 +18,23 @@ public class animadorImagens : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animarImagem();
+        if (RotacaoZ)
+        {
+            rotacionarEixoZ();
+        }
+        else
+        {
+            rotacionarEixoY();
+        }
     }
 
-    void animarImagem()
+    void rotacionarEixoY()
     {
         transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+    }
+
+    void rotacionarEixoZ()
+    {
+        transform.Rotate(Vector3.forward, rotationSpeed * Time.deltaTime);
     }
 }

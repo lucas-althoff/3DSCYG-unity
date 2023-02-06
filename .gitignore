@@ -21,8 +21,8 @@
 sysinfo.txt
 # Unity3D generated meta files
 *.pidb.meta
-
-
+Builds/*
+DevUI/*
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !3DSCYG/[Aa]ssets/**/*.meta
 

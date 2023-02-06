@@ -21,7 +21,20 @@ public class EventManager : MonoBehaviour
 
     public void ActivateEvent(int eventID)
     {
-        SceneManager.LoadScene("IniciarMissaoSeletiva");
+        
+        switch (eventID)
+        {
+            case 1:
+                //Incluir tipo de missao
+            case 2:
+                //Incluir tipo de missao
+            case 3:
+                //Incluir tipo de missao
+            default:
+                SceneManager.LoadScene("IniciarMissaoSeletiva");
+                break;
+        }
+        
         //if (eventID == 1)
         //{
         //    SceneManager.LoadScene("IniciarMissaoSeletiva");

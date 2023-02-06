@@ -17,10 +17,20 @@ public static class ButtonExtension
 			OnClick(param);
 		});
 	}
+	
+	// public static void AddEventListener2<T> (this Button button, T param, Action<T> OnClick)
+	// {
+	// 	button.onClick.AddListener(delegate() {
+	// 		OnClick(param);
+	// 	});
+	// }
 }
 
 public class Formulario01 : MonoBehaviour
 {
+	[SerializeField]
+	public GameObject InformPanel; 
+
 	[Serializable]
 	public struct Item
 	{
@@ -46,6 +56,10 @@ public class Formulario01 : MonoBehaviour
 			//g.transform.GetChild(2).GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = todosItens[i].Descricao;
 			//g.transform.GetChild(2).GetComponent<Button>().AddEventListener(i, InformClicked);
             g.GetComponent<Button>().AddEventListener(i, ItemClicked);
+			
+			//Inserir Descricao
+			//g.transform.GetChild(3).GetChild(0).GetComponent<TMPro.TextMeshProUGUI>().text = todosItens[itemIndex].Descricao;
+			//g.transform.GetChild(3).GetComponent<Button>().AddEventListener(i, informItemClicked);
 		}
 
 		Destroy (grupoBotoes);
@@ -58,12 +72,18 @@ public class Formulario01 : MonoBehaviour
 		//Debug.Log ("desc " + todosItens [itemIndex].Descricao);
 	}
 
-    void InformClicked (int itemIndex)
+	void informItemClicked (int itemIndex)
 	{
-		Debug.Log ("------------item " + itemIndex + " clicked---------------");
+		Debug.Log ("------------INFORM " + itemIndex + " clicked---------------");
 		Debug.Log ("nome " + todosItens[itemIndex].Nome);
+		
+		if (!InformPanel.activeSelf)
+		{
+			InformPanel.SetActive(true);
+		}
 		//Debug.Log ("desc " + todosItens [itemIndex].Descricao);
 	}
+
 }
 
 

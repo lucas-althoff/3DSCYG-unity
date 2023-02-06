@@ -10,7 +10,6 @@ public class UIManagerAutenticacao : MonoBehaviour
     //Screen object variables
     public GameObject loginUI;
     public GameObject registerUI;
-    public GameObject PlayerViewUI;
 
     private void Awake()
     {
@@ -54,7 +53,6 @@ public class UIManagerAutenticacao : MonoBehaviour
     }
     public void LoadPlayerView() //Back button
     {
-        ClearScreen();
         SceneManager.LoadScene("PlayerView");
     }
 }

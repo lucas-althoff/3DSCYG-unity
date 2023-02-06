@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -37,10 +38,10 @@ public class UIManager : MonoBehaviour
 
     public void StartScreen() //Turn off all screens
     {
-        loginUI.SetActive(true);
+        loginUI.SetActive(false);
         MissaoManager.SetActive(true);
         registerUI.SetActive(false);
-        PlayerViewUI.SetActive(false);
+        PlayerViewUI.SetActive(true);
         TelaEntradaUI.SetActive(false);
         MenuUI.SetActive(false);
         MissoesUI.SetActive(false);
@@ -72,7 +73,7 @@ public class UIManager : MonoBehaviour
         MissaoManager.SetActive(true);
     }
 
-  public void ClearScreenPopUp() //Turn off all screens except PlayerView HUD
+    public void ClearScreenPopUp() //Turn off all screens except PlayerView HUD
     {
         loginUI.SetActive(false);
         registerUI.SetActive(false);
@@ -83,6 +84,18 @@ public class UIManager : MonoBehaviour
         userDataUI.SetActive(false);
         scoreboardUI.SetActive(false);
         MissaoManager.SetActive(true);
+    }
+
+
+    public void ClearTelaEntrada() //Turn off all screens except PlayerView HUD
+    {
+        loginUI.SetActive(false);
+        registerUI.SetActive(false);
+        TelaEntradaUI.SetActive(false);
+        PlayerViewUI.SetActive(true);
+        Destroy(loginUI);
+        Destroy(registerUI);
+        Destroy(TelaEntradaUI);
     }
 
     public void LoginScreen() //Back button
@@ -97,13 +110,12 @@ public class UIManager : MonoBehaviour
     }
     public void PlayerViewScreen() //Back button
     {
-        ClearScreen();
-        PlayerViewUI.SetActive(true);
+        ClearTelaEntrada();
     }
 
     public void TelaEntradaScreen() //Back button
     {
-        ClearScreen();
+        loginUI.SetActive(true);
         TelaEntradaUI.SetActive(true);
     }
 
@@ -144,4 +156,9 @@ public class UIManager : MonoBehaviour
         PlayerViewUI.SetActive(true);
     }
 
+    public void LogOutClick()
+    {
+        Debug.Log("Saindo do Jogo!");
+        SceneManager.LoadScene("PlayerView");
+    }
 }

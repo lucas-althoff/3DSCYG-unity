@@ -75,6 +75,26 @@ public class MenuController : MonoBehaviour
         
     }
 
+    public void PushTwoPages(Page Page, Page Page2)
+    {
+        Page.Enter(true);
+        Page2.Enter(true);
+        
+        if (PageStack.Count > 0)
+        {
+            Page currentPage = PageStack.Peek();
+
+            if (currentPage.ExitOnNewPagePush)
+            {
+                currentPage.Exit(false);
+            }
+        }
+
+        PageStack.Push(Page);
+        PageStack.Push(Page2);
+        
+    }
+
     public void PopPage()
     {
         if (PageStack.Count > 1)
@@ -100,6 +120,29 @@ public class MenuController : MonoBehaviour
         {
             PopPage();
         }
+    }
+
+   public void initAgain(Page Page)
+    {
+        EventSystem.current.SetSelectedGameObject(FirstFocusItem);
+        PushPage(Page);
+    }
+
+    public void invokePush2sec(Page Page)
+    {
+        StartCoroutine(Push2sec(Page.GetComponent<Page>()));
+    }
+
+    IEnumerator Push2sec(Page Page) 
+    {
+        // if (!activeSelf) 
+        // {
+        //     Page.SetActive(true);
+        // }
+         
+        yield return new WaitForSeconds(2);
+        PushPage(Page);
+        Debug.Log("Will leave page after 2 seconds");
     }
 
     public void loadExit() 

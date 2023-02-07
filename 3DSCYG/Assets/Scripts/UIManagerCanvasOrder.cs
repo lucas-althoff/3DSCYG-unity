@@ -11,6 +11,7 @@ public class UIManagerCanvasOrder : MonoBehaviour
     public GameObject Canvas2;
     public GameObject Canvas3;
     public GameObject Canvas4;
+    public GameObject CanvasFeedback;
 
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class UIManagerCanvasOrder : MonoBehaviour
         Canvas2.SetActive(false);
         Canvas3.SetActive(false);
         Canvas4.SetActive(false);
+        CanvasFeedback.SetActive(false);
     }
 
     public void PushCanvas2() //Back button
@@ -52,4 +54,12 @@ public class UIManagerCanvasOrder : MonoBehaviour
         Canvas4.SetActive(true);
     }
 
+    public void PushCanvasFeedback() //Back button
+    {
+        Canvas1.SetActive(false);
+        Canvas2.SetActive(false);
+        Canvas3.SetActive(false);
+        Canvas4.SetActive(false);
+        CanvasFeedback.SetActive(true);
+    }
 }

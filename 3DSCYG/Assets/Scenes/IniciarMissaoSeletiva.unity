@@ -594,7 +594,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -8.634216}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &249744131
 MonoBehaviour:
@@ -835,7 +835,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Voltar
 
-    MAPA'
+    Mapa'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1119,7 +1119,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -286, y: 4}
+  m_AnchoredPosition: {x: -221, y: 32}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &546779447
@@ -1176,7 +1176,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 410.7655, y: 0, z: 51.761204, w: 0}
+  m_margin: {x: 448.3772, y: 0, z: 9.029789, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1498,7 +1498,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 400
+  m_Spacing: 530
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -1520,21 +1520,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InformPanel: {fileID: 0}
   todosItens:
+  - Nome: "Educa\xE7\xE3o b\xE1sica"
+    Descricao: "Educa\xE7\xE3o b\xE1sica"
+    Icone: {fileID: 21300000, guid: 73d7a39ec50ec3e4ba449e7b9fd01ac8, type: 3}
   - Nome: Universidade
     Descricao: Universidade
     Icone: {fileID: 21300000, guid: f10e5cd807ed6964ea11a92f6732dfdf, type: 3}
-  - Nome: Livre Iniciativa
-    Descricao: Livre Iniciativa
-    Icone: {fileID: 21300000, guid: 2d6c738570cf7b3499ffb31c8b1038ec, type: 3}
-  - Nome: Arte e Cultura
-    Descricao: Arte e Cultura
+  - Nome: Lazer e cultura
+    Descricao: Lazer e cultura
     Icone: {fileID: 21300000, guid: ab4c9b9efb1b9a545819bb85232d6221, type: 3}
-  - Nome: Comunidade
-    Descricao: Comunidade
+  - Nome: "Fam\xEDlia e comunidade"
+    Descricao: "Fam\xEDlia e comunidade"
     Icone: {fileID: 21300000, guid: 9c69c8f427fc0ec4994241f3a4b9d0bd, type: 3}
-  - Nome: "Ensino B\xE1sico"
-    Descricao: "Ensino b\xE1sico"
-    Icone: {fileID: 21300000, guid: 73d7a39ec50ec3e4ba449e7b9fd01ac8, type: 3}
+  - Nome: Trabalho e livre iniciativa
+    Descricao: Trabalho e livre iniciativa
+    Icone: {fileID: 21300000, guid: 2d6c738570cf7b3499ffb31c8b1038ec, type: 3}
 --- !u!114 &657126566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,6 +1586,7 @@ GameObject:
   - component: {fileID: 922799804}
   - component: {fileID: 922799803}
   - component: {fileID: 922799807}
+  - component: {fileID: 922799808}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1693,6 +1694,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InitialPage: {fileID: 597243985}
   FirstFocusItem: {fileID: 130136861}
+--- !u!114 &922799808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922799802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f7741a0b1be3040b117fa3bf358dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &930449129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3112,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -171, y: 0}
+  m_AnchoredPosition: {x: -11, y: 93}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1679821523
@@ -3149,14 +3162,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3408,7 +3421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 158, y: -136}
+  m_AnchoredPosition: {x: 158, y: 7}
   m_SizeDelta: {x: 600, y: 1500}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1833023967
@@ -3469,21 +3482,21 @@ MonoBehaviour:
   - Nome: Investigador
     Descricao: Investigador
     Icone: {fileID: 21300000, guid: db271ab6a9dacd045b31c462683b8a77, type: 3}
-  - Nome: "Ca\xE7ador"
-    Descricao: "Ca\xE7ador"
-    Icone: {fileID: 21300000, guid: 51d7165c4dd5d544588f062c2645f318, type: 3}
+  - Nome: Inventor
+    Descricao: Inventor
+    Icone: {fileID: 21300000, guid: 2e6ceff413a33e8418300679944801c3, type: 3}
   - Nome: "Volunt\xE1rio"
     Descricao: "Volunt\xE1rio"
     Icone: {fileID: 21300000, guid: 3f023f087906a0f45b66e9301095cce7, type: 3}
   - Nome: Explorador
     Descricao: Explorador
     Icone: {fileID: 21300000, guid: dea74d6ea2038854ebce851f763f0e32, type: 3}
-  - Nome: Inventor
-    Descricao: Inventor
-    Icone: {fileID: 21300000, guid: 2e6ceff413a33e8418300679944801c3, type: 3}
   - Nome: Atleta
     Descricao: Atleta
     Icone: {fileID: 21300000, guid: 2115b29a3965cbb4da4fd187f9a1e836, type: 3}
+  - Nome: "Ca\xE7ador"
+    Descricao: "Ca\xE7ador"
+    Icone: {fileID: 21300000, guid: 51d7165c4dd5d544588f062c2645f318, type: 3}
 --- !u!114 &1833023970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3502,7 +3515,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 430
+  m_Spacing: 480
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
@@ -3680,7 +3693,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: -33.333008}
+  m_AnchoredPosition: {x: 0.000061035156, y: -33.332886}
   m_SizeDelta: {x: 0, y: 66.66675}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1943495839
@@ -3834,7 +3847,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -407, y: -1620}
+  m_AnchoredPosition: {x: -407, y: -1171}
   m_SizeDelta: {x: 396.1, y: 345.5657}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993918520
@@ -3880,7 +3893,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1993918521}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922799808}
+        m_TargetAssemblyTypeName: SceneUIManager, Assembly-CSharp
+        m_MethodName: OnMapClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1993918521
 MonoBehaviour:
   m_ObjectHideFlags: 0
